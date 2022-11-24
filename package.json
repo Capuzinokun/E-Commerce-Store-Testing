@@ -1,0 +1,23 @@
+{
+  "name": "e-commerce-store-tests",
+  "version": "1.0.0",
+  "description": "This repository holds the testing scripts for validating an e-commerce store.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Capuzinokun/E-Commerce-Store-Testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Capuzinokun/E-Commerce-Store-Testing/issues"
+  },
+  "homepage": "https://github.com/Capuzinokun/E-Commerce-Store-Testing#readme",
+  "dependencies": {
+    "coveralls": "^3.1.1",
+    "mocha": "^10.1.0"
+  }
+}
