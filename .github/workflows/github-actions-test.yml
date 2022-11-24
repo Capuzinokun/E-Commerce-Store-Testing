@@ -1,0 +1,28 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  test-test:
+
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: "Checkout"
+        uses: actions/checkout
+
+      - name: "Install Node.js"
+        uses: actions/setup-node
+
+      - name: "Install Mocha"
+        uses: npm install -g mocha
+
+      - name: "Install dependencies"
+        uses: npm install
+
+      - name: "Run tests"
+        uses: npm test
