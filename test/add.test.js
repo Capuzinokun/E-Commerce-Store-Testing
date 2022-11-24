@@ -16,9 +16,5 @@ describe('Number additions', function () {
         assert.equal(add(NaN,2), NaN);
       });
 
-      it('Example fail', function () {
-        assert.equal(add(1,1), 0);
-      });
-
     });
   });
