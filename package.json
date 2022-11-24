@@ -2,9 +2,10 @@
   "name": "e-commerce-store-tests",
   "version": "1.0.0",
   "description": "This repository holds the testing scripts for validating an e-commerce store.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test/"
   },
   "repository": {
     "type": "git",
