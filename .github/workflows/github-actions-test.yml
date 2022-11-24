@@ -19,10 +19,10 @@ jobs:
         uses: actions/setup-node
 
       - name: "Install Mocha"
-        uses: npm install -g mocha
+        run: npm install -g mocha
 
       - name: "Install dependencies"
-        uses: npm install
+        run: npm install
 
       - name: "Run tests"
-        uses: npm test
+        run: npm test
