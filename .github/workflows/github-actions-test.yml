@@ -27,11 +27,11 @@ jobs:
         run: npm install
 
       - name: "Generate coverage data"
-        run: 
-            mkdir coverage
-            node_modules/.bin/jscover library/src src-cov
-            mv library/src library/src-orig
-            mv src-cov library/src
+        run: |
+             mkdir coverage &&
+             node_modules/.bin/jscover library/src src-cov &&
+             mv -f library/src library/src-orig &&
+             mv -f src-cov library/src
 
       - name: "Run tests"
         run: npm test
