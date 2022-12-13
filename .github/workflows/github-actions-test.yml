@@ -31,6 +31,7 @@ jobs:
         run: |
             mkdir coverage
             npm test
+            npm run coverage
 
       - name: "Post coverage data to Coveralls"
         uses: coverallsapp/github-action@master
