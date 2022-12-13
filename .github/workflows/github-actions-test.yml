@@ -27,17 +27,11 @@ jobs:
         run: npm install
 
       - name: "Generate coverage data"
-        run:  rm -rf coverage
-              rm -rf lib-cov
-
-              mkdir coverage
-
-              node_modules/.bin/jscover library/src library/src-cov
-              mv library/src library/src-orig
-              mv library/src-cov library/src
-              node_modules/.bin/mocha -R mocha-lcov-reporter > coverage/coverage.lcov
-              rm -rf library/src
-              mv library/src-orig library/src
+        run: 
+            mkdir coverage
+            node_modules/.bin/jscover library/src src-cov
+            mv library/src library/src-orig
+            mv src-cov library/src
 
       - name: "Run tests"
         run: npm test
