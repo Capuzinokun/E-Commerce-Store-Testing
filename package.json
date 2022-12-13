@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R mocha-lcov-reporter > coverage/coverage.lcov"
+    "test": "mocha test/ -R mocha-lcov-reporter > coverage/coverage.lcov"
   },
   "repository": {
     "type": "git",
