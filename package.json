@@ -5,8 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --all -x \"./node_modules/*\" -x \"./coverage/*\" mocha test/",
-    "coverage": "nyc report --reporter=text-lcov > ./coverage/lcov.info"
+    "test": "nyc --all -x \"./node_modules/*\" -x \"./coverage/*\" -x \"./library/src/.internal/*\" mocha test/",
+    "coverage": "nyc report --all -x \"./node_modules/*\" -x \"./coverage/*\" -x \"./library/src/.internal/*\" --reporter=text-lcov > ./coverage/lcov.info"
   },
   "repository": {
     "type": "git",
