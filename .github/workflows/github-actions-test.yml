@@ -26,11 +26,11 @@ jobs:
       - name: "Install dependencies"
         run: npm install
 
-      - name: "Run tests"
-        run: npm test
-
       - name: "Generate coverage data"
         run: ./coverage.sh
+
+      - name: "Run tests"
+        run: npm test
 
       - name: "Post coverage data to Coveralls"
         uses: coverallsapp/github-action@master
