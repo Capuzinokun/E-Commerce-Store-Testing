@@ -27,11 +27,7 @@ jobs:
         run: npm install
 
       - name: "Generate coverage data"
-        run: |
-             mkdir coverage
-             node_modules/.bin/jscoverage library/src src-cov
-             mv -f library/src library/src-orig
-             mv -f src-cov library/src
+        run: istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec test/
 
       - name: "Run tests"
         run: npm test
