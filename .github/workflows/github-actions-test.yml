@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: "Generate coverage data"
-        run: istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec test/
+        run: ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec test/
 
       - name: "Run tests"
         run: npm test
