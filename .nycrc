@@ -1,0 +1,14 @@
+{
+    "all": true,
+    "include": [
+        "library/src/add.js",
+        "library/src/compact.js",
+        "library/src/defaultTo.js",
+        "library/src/filter.js",
+        "library/src/isEmpty.js",
+        "library/src/toNumber.js",
+        "library/src/toString.js",
+        "library/src/slice.js",
+        "library/src/words.js"
+    ]
+}
