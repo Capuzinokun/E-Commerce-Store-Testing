@@ -22,7 +22,7 @@ describe("Slices array with given parameters (start, end)", function () {
   });
 
   describe("#slice()", function () {
-    it("Should return first two values", function () {
+    it("Should return values according to given parameter", function () {
       assert.deepEqual(slice(["Vegetables", "Fruits", "Local"], 0, 2), [
         "Vegetables",
         "Fruits",
@@ -44,6 +44,18 @@ describe("Slices array with given parameters (start, end)", function () {
       assert.deepEqual(slice(["Vegetables", "Fruits", "Local"], 1, 2), [
         "Fruits",
       ]);
+    });
+  });
+
+  describe("#slice()", function () {
+    it("Return empty array if given empty array", function () {
+      assert.deepEqual(slice([]), []);
+    });
+  });
+
+  describe("#slice()", function () {
+    it("Return empty array if given index beyond length", function () {
+      assert.deepEqual(slice(["Vegetables", "Fruits", "Local"], 5), []);
     });
   });
 });
