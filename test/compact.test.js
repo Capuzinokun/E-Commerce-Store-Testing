@@ -3,11 +3,11 @@ import compact from "../library/src/compact.js";
 
 describe("Falsey value removal", function () {
   describe("#compact()", function () {
-    it("Should return an otherwise identical array without 'false' values", function () {
+    it("Should return an otherwise identical array without false values", function () {
       assert.deepEqual(compact([1, false, 2, 3]), [1, 2, 3]);
     });
 
-    it("Should return an otherwise identical array without 'zero' values", function () {
+    it("Should return an otherwise identical array without zero values", function () {
       assert.deepEqual(compact([1, 0, 0.0, -0, 0x0, 2, 3]), [1, 2, 3]);
     });
 
@@ -15,7 +15,7 @@ describe("Falsey value removal", function () {
       assert.deepEqual(compact([1, 2, "", 3]), [1, 2, 3]);
     });
 
-    it("Should return an otherwise identical array without 'NaN' values", function () {
+    it("Should return an otherwise identical array without NaN values", function () {
       assert.deepEqual(compact([1, 2, 3, NaN]), [1, 2, 3]);
     });
 
