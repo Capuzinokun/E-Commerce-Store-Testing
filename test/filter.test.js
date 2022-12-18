@@ -8,7 +8,7 @@ describe('Array filtering', function () {
         assert.deepEqual(filter([], true), []);
       });
 
-      it("Should return an array without numbers larger than 5", function () {
+      it("Should return an array filtered with a given predicate", function () {
         assert.deepEqual(filter([1,2,3,4,5,6,7], (num) => num < 5), [1,2,3,4]);
       });
 
