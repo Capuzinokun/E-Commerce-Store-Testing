@@ -27,8 +27,8 @@ describe("Divide two given values", function () {
   });
 
   describe("#divide()", function () {
-    it("Should return null if divided by zero", function () {
-      assert.deepEqual(divide(2, 0), null);
+    it("Should return NaN if divided by zero", function () {
+      assert.deepEqual(divide(2, 0), NaN);
     });
   });
 
@@ -51,38 +51,38 @@ describe("Divide two given values", function () {
   });
 
   describe("#divide()", function () {
-    it("Should return null if given NaN value as dividend", function () {
-      assert.deepEqual(divide(NaN, 2), null);
+    it("Should return NaN if given NaN value as dividend", function () {
+      assert.deepEqual(divide(NaN, 2), NaN);
     });
   });
 
   describe("#divide()", function () {
-    it("Should return null if given NaN value as divisor", function () {
-      assert.deepEqual(divide(2, NaN), null);
+    it("Should return NaN if given NaN value as divisor", function () {
+      assert.deepEqual(divide(2, NaN), NaN);
     });
   });
 
   describe("#divide()", function () {
-    it("Should return null if given null as dividend", function () {
-      assert.deepEqual(divide(null, 2), null);
+    it("Should return NaN if given null as dividend", function () {
+      assert.deepEqual(divide(null, 2), NaN);
     });
   });
 
   describe("#divide()", function () {
-    it("Should return null if given null as divisor", function () {
-      assert.deepEqual(divide(2, null), null);
+    it("Should return NaN if given null as divisor", function () {
+      assert.deepEqual(divide(2, null), NaN);
     });
   });
 
   describe("#divide()", function () {
-    it("Should return null if given nothing", function () {
-      assert.deepEqual(divide(), null);
+    it("Should return NaN if given nothing", function () {
+      assert.deepEqual(divide(), NaN);
     });
   });
 
   describe("#divide()", function () {
-    it("Should return null if given only one parameter", function () {
-      assert.deepEqual(divide(2), null);
+    it("Should return NaN if given only one parameter", function () {
+      assert.deepEqual(divide(2), NaN);
     });
   });
 });
