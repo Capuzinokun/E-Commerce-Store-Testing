@@ -10,7 +10,6 @@ jobs:
   Tests:
 
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
 
       - name: "Checkout"
@@ -27,14 +26,18 @@ jobs:
       - name: "Install dependencies"
         run: npm install
 
-
       - name: "Run tests"
         run: |
             mkdir coverage
             npm test
             npm run coverage
 
+      - name: "Generate a coverage report"
+        if: always()
+        run: npm run coverage
+
       - name: "Post coverage data to Coveralls"
+        if: always()
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
