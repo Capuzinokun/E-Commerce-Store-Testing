@@ -12,7 +12,7 @@ describe("Slices array with given parameters (start, end)", function () {
   });
 
   describe("#slice()", function () {
-    it("Should return array as it is with index 0", function () {
+    it("Should return array as it is with given index", function () {
       assert.deepEqual(slice(["Vegetables", "Fruits", "Local"], 0), [
         "Vegetables",
         "Fruits",
