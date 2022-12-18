@@ -27,7 +27,7 @@ describe("Converts given value to number", function () {
   });
 
   describe("#toNumber()", function () {
-    it("Should return number-class's mininum value", function () {
+    it("Should return number-class's minimum value", function () {
       assert.deepEqual(toNumber(5e-550), Number.MIN_VALUE);
     });
   });
