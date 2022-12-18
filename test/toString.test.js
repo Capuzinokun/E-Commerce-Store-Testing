@@ -39,8 +39,8 @@ describe("Converts given value to string, errors should be handeled", function (
   });
 
   describe("#toString()", function () {
-    it("Should convert undefined to empty string", function () {
-      assert.deepEqual(toString(undefined), "");
+    it("Should convert empty to empty string", function () {
+      assert.deepEqual(toString(""), "");
     });
   });
 });

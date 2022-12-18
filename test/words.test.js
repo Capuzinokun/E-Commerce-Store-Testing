@@ -29,8 +29,12 @@ describe("Splitting words from string to array", function () {
       assert.deepEqual(words("Vegetables, Fruits, Local", /(?!x)x/g), []);
     });
 
-    it("should return empty array, empty string", function () {
+    it("should return empty array from empty string", function () {
       assert.deepEqual(words("", []));
+    });
+
+    it("should return empty array from null", function () {
+      assert.deepEqual(words(null, []));
     });
   });
 });
